@@ -6,12 +6,12 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import pl.waw.ibspan.phytia.ann.layers.RbfLayer;
-import pl.waw.ibspan.phytia.ann.networks.RBFNetwork;
-import pl.waw.ibspan.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
-import pl.waw.ibspan.phytia.model.sets.DoubleVector;
-import pl.waw.ibspan.phytia.model.sets.PatternPairVO;
-import pl.waw.ibspan.phytia.model.sets.SupervisedDataSet;
+import pl.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
+import pl.phytia.model.sets.PatternPairVO;
+import pl.phytia.ann.layers.RbfLayer;
+import pl.phytia.ann.networks.RBFNetwork;
+import pl.phytia.model.sets.DoubleVector;
+import pl.phytia.model.sets.SupervisedDataSet;
 
 /**
  * Algorytm trenigu nadzorowanego (online) sieci RBF dokonujący modyfikacji:

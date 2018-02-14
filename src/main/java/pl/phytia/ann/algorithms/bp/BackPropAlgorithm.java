@@ -2,16 +2,16 @@ package pl.phytia.ann.algorithms.bp;
 
 import java.util.Iterator;
 
-import pl.waw.ibspan.phytia.ann.algorithms.Algorithm;
-import pl.waw.ibspan.phytia.ann.layers.MLPLayer;
-import pl.waw.ibspan.phytia.ann.networks.MLPNetwork;
-import pl.waw.ibspan.phytia.ann.neurons.Perceptron;
-import pl.waw.ibspan.phytia.model.conf.algorithms.BackPropConfiguration;
-import pl.waw.ibspan.phytia.model.enums.EnumLayerType;
-import pl.waw.ibspan.phytia.model.enums.EnumLearningRatioType;
-import pl.waw.ibspan.phytia.model.sets.DoubleVector;
-import pl.waw.ibspan.phytia.model.sets.PatternPairVO;
-import pl.waw.ibspan.phytia.model.sets.SupervisedDataSet;
+import pl.phytia.ann.algorithms.Algorithm;
+import pl.phytia.ann.layers.MLPLayer;
+import pl.phytia.ann.networks.MLPNetwork;
+import pl.phytia.ann.neurons.Perceptron;
+import pl.phytia.model.conf.algorithms.BackPropConfiguration;
+import pl.phytia.model.enums.EnumLayerType;
+import pl.phytia.model.enums.EnumLearningRatioType;
+import pl.phytia.model.sets.DoubleVector;
+import pl.phytia.model.sets.PatternPairVO;
+import pl.phytia.model.sets.SupervisedDataSet;
 
 public abstract class BackPropAlgorithm<S extends BackPropAlgorithm> extends
 		Algorithm<S, BackPropConfiguration, SupervisedDataSet, MLPNetwork> {

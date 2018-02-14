@@ -2,14 +2,14 @@ package pl.phytia.ann.algorithms.rbf;
 
 import java.util.Iterator;
 
-import pl.waw.ibspan.phytia.ann.layers.AdderLayer;
-import pl.waw.ibspan.phytia.ann.layers.RbfLayer;
-import pl.waw.ibspan.phytia.ann.networks.RBFNetwork;
-import pl.waw.ibspan.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
-import pl.waw.ibspan.phytia.model.enums.EnumIterationType;
-import pl.waw.ibspan.phytia.model.sets.DoubleVector;
-import pl.waw.ibspan.phytia.model.sets.PatternPairVO;
-import pl.waw.ibspan.phytia.model.sets.SupervisedDataSet;
+import pl.phytia.ann.layers.AdderLayer;
+import pl.phytia.ann.networks.RBFNetwork;
+import pl.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
+import pl.phytia.model.enums.EnumIterationType;
+import pl.phytia.model.sets.DoubleVector;
+import pl.phytia.model.sets.PatternPairVO;
+import pl.phytia.ann.layers.RbfLayer;
+import pl.phytia.model.sets.SupervisedDataSet;
 import Jama.Matrix;
 
 /**

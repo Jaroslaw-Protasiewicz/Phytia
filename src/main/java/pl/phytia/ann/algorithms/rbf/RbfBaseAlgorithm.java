@@ -1,12 +1,12 @@
 package pl.phytia.ann.algorithms.rbf;
 
-import pl.waw.ibspan.phytia.ann.algorithms.Algorithm;
-import pl.waw.ibspan.phytia.ann.functions.centerSelect.CenterFunctionFactory;
-import pl.waw.ibspan.phytia.ann.functions.centerSelect.CenterSelectFunction;
-import pl.waw.ibspan.phytia.ann.networks.RBFNetwork;
-import pl.waw.ibspan.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
-import pl.waw.ibspan.phytia.model.sets.DoubleVector;
-import pl.waw.ibspan.phytia.model.sets.SupervisedDataSet;
+import pl.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
+import pl.phytia.ann.algorithms.Algorithm;
+import pl.phytia.ann.functions.centerSelect.CenterFunctionFactory;
+import pl.phytia.ann.functions.centerSelect.CenterSelectFunction;
+import pl.phytia.ann.networks.RBFNetwork;
+import pl.phytia.model.sets.DoubleVector;
+import pl.phytia.model.sets.SupervisedDataSet;
 import Jama.Matrix;
 
 /**

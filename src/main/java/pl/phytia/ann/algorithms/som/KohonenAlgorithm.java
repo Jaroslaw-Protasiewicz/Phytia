@@ -2,16 +2,16 @@ package pl.phytia.ann.algorithms.som;
 
 import java.util.Iterator;
 
-import pl.waw.ibspan.phytia.ann.algorithms.Algorithm;
-import pl.waw.ibspan.phytia.ann.layers.SOMLayer;
-import pl.waw.ibspan.phytia.ann.layers.Som2DimLayer;
-import pl.waw.ibspan.phytia.ann.layers.Som3DimLayer;
-import pl.waw.ibspan.phytia.ann.networks.SOMNetwork;
-import pl.waw.ibspan.phytia.model.conf.algorithms.KohonenConfiguration;
-import pl.waw.ibspan.phytia.model.conf.layers.SOMLayerConfiguration;
-import pl.waw.ibspan.phytia.model.sets.ClassPatternVO;
-import pl.waw.ibspan.phytia.model.sets.DoubleVector;
-import pl.waw.ibspan.phytia.model.sets.UnsupervisedDataSet;
+import pl.phytia.ann.layers.Som3DimLayer;
+import pl.phytia.model.conf.algorithms.KohonenConfiguration;
+import pl.phytia.ann.algorithms.Algorithm;
+import pl.phytia.ann.layers.SOMLayer;
+import pl.phytia.ann.layers.Som2DimLayer;
+import pl.phytia.ann.networks.SOMNetwork;
+import pl.phytia.model.conf.layers.SOMLayerConfiguration;
+import pl.phytia.model.sets.ClassPatternVO;
+import pl.phytia.model.sets.DoubleVector;
+import pl.phytia.model.sets.UnsupervisedDataSet;
 
 /**
  * Algorytm treningu Kohonena. Zakłada się, że sieć ma jedną warstwę.

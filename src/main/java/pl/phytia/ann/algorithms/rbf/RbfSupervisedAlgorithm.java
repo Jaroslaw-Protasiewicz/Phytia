@@ -2,14 +2,14 @@ package pl.phytia.ann.algorithms.rbf;
 
 import java.util.List;
 
-import pl.waw.ibspan.phytia.ann.layers.AdderLayer;
-import pl.waw.ibspan.phytia.ann.layers.RbfLayer;
-import pl.waw.ibspan.phytia.ann.networks.RBFNetwork;
-import pl.waw.ibspan.phytia.ann.neurons.AdderNeuron;
-import pl.waw.ibspan.phytia.ann.neurons.RbfNeuron;
-import pl.waw.ibspan.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
-import pl.waw.ibspan.phytia.model.sets.DoubleVector;
-import pl.waw.ibspan.phytia.model.sets.SupervisedDataSet;
+import pl.phytia.ann.layers.AdderLayer;
+import pl.phytia.ann.layers.RbfLayer;
+import pl.phytia.ann.networks.RBFNetwork;
+import pl.phytia.ann.neurons.AdderNeuron;
+import pl.phytia.ann.neurons.RbfNeuron;
+import pl.phytia.model.conf.algorithms.RbfAlgorithmConfiguration;
+import pl.phytia.model.sets.DoubleVector;
+import pl.phytia.model.sets.SupervisedDataSet;
 
 /**
  * Abstrakcyjny agorytm treningu nadzorowanego sieci RBF

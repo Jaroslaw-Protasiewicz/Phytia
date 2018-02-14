@@ -2,16 +2,17 @@ package pl.phytia.ann.algorithms;
 
 import org.apache.log4j.Logger;
 
-import pl.waw.ibspan.phytia.ann.functions.error.DiffErrorFunction;
-import pl.waw.ibspan.phytia.ann.functions.error.ErrorFunction;
-import pl.waw.ibspan.phytia.ann.functions.error.MapeErrorFunction;
-import pl.waw.ibspan.phytia.ann.functions.error.SumSquaredErrorFunction;
-import pl.waw.ibspan.phytia.ann.networks.Network;
-import pl.waw.ibspan.phytia.core.Configurable;
-import pl.waw.ibspan.phytia.core.Trainable;
-import pl.waw.ibspan.phytia.model.conf.algorithms.AlgorithmConfiguration;
-import pl.waw.ibspan.phytia.model.sets.DataSet;
-import pl.waw.ibspan.phytia.utils.StateFixer;
+import pl.phytia.ann.functions.error.DiffErrorFunction;
+import pl.phytia.ann.functions.error.MapeErrorFunction;
+import pl.phytia.ann.functions.error.SumSquaredErrorFunction;
+import pl.phytia.ann.networks.Network;
+import pl.phytia.core.Configurable;
+import pl.phytia.model.conf.algorithms.AlgorithmConfiguration;
+import pl.phytia.model.enums.EnumFunctionType;
+import pl.phytia.utils.StateFixer;
+import pl.phytia.ann.functions.error.ErrorFunction;
+import pl.phytia.core.Trainable;
+import pl.phytia.model.sets.DataSet;
 
 /**
  * Abstrakcyjny algorytm.
@@ -66,13 +67,13 @@ public abstract class Algorithm<S extends Algorithm, C extends AlgorithmConfigur
 		 */
 		if (conf.getStopCondFunctionType() != null) {
 			switch (conf.getErrorFunctionType()) {
-			case SSE:
+			case EnumFunctionType.SSE:
 				this.errorFunction = new SumSquaredErrorFunction();
 				break;
-			case MAPE:
+			case EnumFunctionType.MAPE:
 				this.errorFunction = new SumSquaredErrorFunction();
 				break;
-			case DIFF:
+			case EnumFunctionType.DIFF:
 				this.errorFunction = new DiffErrorFunction();
 				break;
 			default:
@@ -87,10 +88,10 @@ public abstract class Algorithm<S extends Algorithm, C extends AlgorithmConfigur
 		 */
 		if (conf.getStopCondFunctionType() != null) {
 			switch (conf.getStopCondFunctionType()) {
-			case SSE:
+			case EnumFunctionType.SSE:
 				this.stopCondFunction = new SumSquaredErrorFunction();
 				break;
-			case MAPE:
+			case EnumFunctionType.MAPE:
 				this.stopCondFunction = new MapeErrorFunction();
 				break;
 			default:
