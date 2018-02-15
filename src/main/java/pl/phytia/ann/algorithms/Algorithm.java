@@ -14,6 +14,8 @@ import pl.phytia.ann.functions.error.ErrorFunction;
 import pl.phytia.core.Trainable;
 import pl.phytia.model.sets.DataSet;
 
+import static pl.phytia.model.enums.EnumFunctionType.*;
+
 /**
  * Abstrakcyjny algorytm.
  * 
@@ -67,13 +69,13 @@ public abstract class Algorithm<S extends Algorithm, C extends AlgorithmConfigur
 		 */
 		if (conf.getStopCondFunctionType() != null) {
 			switch (conf.getErrorFunctionType()) {
-			case EnumFunctionType.SSE:
+			case SSE:
 				this.errorFunction = new SumSquaredErrorFunction();
 				break;
-			case EnumFunctionType.MAPE:
+			case MAPE:
 				this.errorFunction = new SumSquaredErrorFunction();
 				break;
-			case EnumFunctionType.DIFF:
+			case DIFF:
 				this.errorFunction = new DiffErrorFunction();
 				break;
 			default:
@@ -88,10 +90,10 @@ public abstract class Algorithm<S extends Algorithm, C extends AlgorithmConfigur
 		 */
 		if (conf.getStopCondFunctionType() != null) {
 			switch (conf.getStopCondFunctionType()) {
-			case EnumFunctionType.SSE:
+			case SSE:
 				this.stopCondFunction = new SumSquaredErrorFunction();
 				break;
-			case EnumFunctionType.MAPE:
+			case MAPE:
 				this.stopCondFunction = new MapeErrorFunction();
 				break;
 			default:

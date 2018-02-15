@@ -3,6 +3,9 @@ package pl.phytia.ann.functions.centerSelect;
 import pl.phytia.model.conf.functions.centerSelect.CenterSelFunctionConfiguration;
 import pl.phytia.model.enums.EnumCenterSelectType;
 
+import static pl.phytia.model.enums.EnumCenterSelectType.*;
+import static pl.phytia.model.enums.EnumCenterSelectType.K_MEAN_CENTER_SELECT;
+
 /**
  * Prosta fabryka funkcji doboru centrów.
  * 
@@ -21,13 +24,13 @@ public class CenterFunctionFactory {
 			CenterSelFunctionConfiguration conf) {
 		CenterSelectFunction centerFunction = null;
 		switch (conf.getCenterSelectType()) {
-		case EnumCenterSelectType.K_MEAN_CENTER_SELECT:
+		case K_MEAN_CENTER_SELECT:
 			centerFunction = new KMeanCenterFunction(conf);
 			break;
-		case EnumCenterSelectType.RANDOM_CENTER_SELECT:
+		case RANDOM_CENTER_SELECT:
 			centerFunction = new RandomCenterFunction(conf);
 			break;
-		case EnumCenterSelectType.STRICT_CENTER_SELECT:
+		case STRICT_CENTER_SELECT:
 			centerFunction = new StrictCenterFunction(conf);
 			break;
 		default:

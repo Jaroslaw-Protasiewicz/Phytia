@@ -8,6 +8,9 @@ import pl.phytia.model.conf.layers.RbfLayerConfiguration;
 import pl.phytia.model.enums.EnumCenterWidthType;
 import pl.phytia.model.sets.DoubleVector;
 
+import static pl.phytia.model.enums.EnumCenterWidthType.*;
+import static pl.phytia.model.enums.EnumCenterWidthType.CONSTANT;
+
 /**
  * Warstwa radialna sieci RBF.
  * 
@@ -64,10 +67,10 @@ public class RbfLayer extends Layer<RbfLayer, RbfLayerConfiguration> {
 		 */
 		double width = 0.0;
 		switch (conf.getCenterWidthType()) {
-		case EnumCenterWidthType.CONSTANT:
+		case CONSTANT:
 			width = conf.getRbfFunctionConf().getDefaultWidth();
 			break;
-		case EnumCenterWidthType.ADAPTIVE:
+		case ADAPTIVE:
 			width = (findMaxDistanceBetweenCentres(centers) / (double) Math
 					.sqrt(2 * centers.size()));
 			break;
